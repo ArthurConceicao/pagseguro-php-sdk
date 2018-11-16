@@ -1,4 +1,5 @@
 <?php
+
 include '../source/Boleto.php';
 
 //Config::setProduction();

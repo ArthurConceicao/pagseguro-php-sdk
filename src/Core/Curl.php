@@ -1,8 +1,12 @@
 <?php
+
+namespace CRPTecnologia\PagSeguroBoleto\Core;
+
+use Exception;
+
 class Curl
 {
     private $header = array();
-    private $data = array();
     private $curl = null;
     private $url = null;
     private $customRequest = 'GET';
@@ -14,9 +18,6 @@ class Curl
      */
     public function __construct($url = null, array $data = array(), array $header = array())
     {
-        if (!extension_loaded("curl")) {
-            throw new Exception("cURL extension is required!");
-        }
         $this->curl = curl_init();
 
         if($url !== null) {

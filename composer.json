@@ -1,18 +1,22 @@
 {
-    "name": "sounoob/pagseguro",
+    "name": "crptecnologia/pagseguro-boleto",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "SouNoob",
-            "email": "OpenSource@sounoob.com.br"
-        }
-    ],
     "require": {
-        "php": ">=5.4.45",
-        "phpunit/phpunit": "4.8.*"
+        "php": ">=7.2",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "CRPTecnologia\\PagSeguroBoleto\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
     },
     "require-dev": {
-        "phpunit/phpunit": "4.8.*"
+        "phpunit/phpunit": "7.4.*"
     },
     "prefer-stable": true
 }
